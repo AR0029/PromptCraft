@@ -42,7 +42,7 @@ class AIPromptBuilderApp extends ConsumerWidget {
       themeMode: themeMode,
       builder: (context, child) {
         return Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: AppColors.primaryGradient,
           ),
           child: Center(
