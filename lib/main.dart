@@ -42,11 +42,25 @@ class AIPromptBuilderApp extends ConsumerWidget {
       themeMode: themeMode,
       builder: (context, child) {
         return Container(
-          color: Colors.black, // Dark letterboxing for web/desktop
+          decoration: const BoxDecoration(
+            gradient: AppColors.primaryGradient,
+          ),
           child: Center(
             child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 800),
-              child: ClipRect(child: child!),
+              constraints: const BoxConstraints(maxWidth: 1000), // Increased width for better feel
+              child: Container(
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 30,
+                      spreadRadius: 10,
+                    ),
+                  ],
+                ),
+                child: child!,
+              ),
             ),
           ),
         );

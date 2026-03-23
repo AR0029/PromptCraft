@@ -61,7 +61,12 @@ class _SplashScreenState extends State<SplashScreen> {
                       BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 20),
                     ],
                   ),
-                  child: const Icon(Icons.auto_awesome, size: 50, color: AppColors.primaryLight),
+                  child: Image.asset(
+                    'assets/images/logo.png', 
+                    width: 60, 
+                    height: 60,
+                    errorBuilder: (context, error, stackTrace) => const Icon(Icons.auto_awesome, size: 50, color: AppColors.primaryLight),
+                  ),
                 ),
               ],
             ).animate().scale(duration: 800.ms, curve: Curves.easeOutBack).shimmer(delay: 800.ms, duration: 1500.ms),
