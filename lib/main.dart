@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'core/theme/app_theme.dart';
+import 'core/constants/app_colors.dart';
 import 'features/splash/splash_screen.dart';
 import 'services/local_storage_service.dart';
 import 'navigation/navigation_providers.dart';
