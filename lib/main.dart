@@ -42,29 +42,8 @@ class AIPromptBuilderApp extends ConsumerWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: themeMode,
       builder: (context, child) {
-        return Container(
-          decoration: BoxDecoration(
-            gradient: AppColors.primaryGradient,
-          ),
-          child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 1000), // Increased width for better feel
-              child: Container(
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 30,
-                      spreadRadius: 10,
-                    ),
-                  ],
-                ),
-                child: child!,
-              ),
-            ),
-          ),
-        );
+        // Returning child directly removes the portrait box and allows full screen landscape on web
+        return child!;
       },
       home: const SplashScreen(),
     );
